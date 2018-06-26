@@ -32,7 +32,6 @@ namespace Practice12
                 {
                     int temp = arr[j - 1];
                     arr[j - 1] = arr[j];
-                    swaps++;
                     arr[j] = temp;
                     swaps++;
                 }
@@ -54,23 +53,23 @@ namespace Practice12
             {
                 for(int i = left; i < right; i++)
                 {
-                    if (arr[i] > arr[i + 1])
+                    if (arr[i] < arr[i + 1])
                     {
                         b = arr[i];
                         arr[i] = arr[i + 1];
                         arr[i + 1] = b;
-                        swaps++;
+                        swaps+=1;
                     }
                 }
                 right--;
                 for(int i = right; i > left; i--)
                 {
-                    if (arr[i - 1] > arr[i])
+                    if (arr[i - 1] < arr[i])
                     {
                         b = arr[i];
                         arr[i] = arr[i - 1];
                         arr[i - 1] = b;
-                        swaps++;
+                        swaps+=1;
                     }
                 }
                 left++;
